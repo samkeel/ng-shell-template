@@ -1,0 +1,29 @@
+<mat-toolbar color="primary">
+  <button
+    type="button"
+    aria-label="Toggle sidenav"
+    mat-icon-button
+    (click)="inputSideNav.toggle()"
+  >
+    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+  </button>
+
+  <span>My App</span>
+  <span class="header-spacer"></span>
+
+  <button
+    mat-icon-button
+    class="example-icon theme-icon"
+    aria-label="Light theme"
+    (click)="themeToggle()"
+  >
+    <div *ngIf="currentTheme === 'light-theme'; else elseBlock">
+      <mat-icon>wb_sunny</mat-icon>
+    </div>
+    <ng-template #elseBlock>
+      <div>
+        <mat-icon>brightness_3</mat-icon>
+      </div>
+    </ng-template>
+  </button>
+</mat-toolbar>

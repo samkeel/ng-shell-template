@@ -1,0 +1,21 @@
+<app-header [inputSideNav]="sideNav"></app-header>
+<mat-sidenav-container class="sidenav-container content">
+  <mat-sidenav
+    #sideNav
+    #drawer
+    class="sidenav"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false"
+  >
+    <!-- Side Nav Menu Content  -->
+    <app-sidenav></app-sidenav>
+    <!--  -->
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <!-- TRANSCLUSION -->
+    <ng-content></ng-content>
+    <!-- TRANSCLUSION -->
+  </mat-sidenav-content>
+</mat-sidenav-container>

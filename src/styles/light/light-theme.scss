@@ -1,0 +1,30 @@
+@use '@angular/material' as mat;
+@use './light_palette.scss' as lp;
+@use '../common.scss';
+
+// Define a light theme
+$light-primary: mat.define-palette(lp.$cust-light-primary-palette);
+$light-accent: mat.define-palette(lp.$cust-light-accent-palette);
+$light-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $light-primary,
+      accent: $light-accent,
+    ),
+  )
+);
+
+$light-color-scheme: (
+  background: (
+    background: #F6EBD7,
+  ),  
+);
+
+$light-theme: common.apply-extra-colors($light-theme, $light-color-scheme);
+
+.mat-drawer-inner-container {
+  background-color: #e9e0ca;
+}
+
+// generate theme
+@include common.create-theme($light-theme);

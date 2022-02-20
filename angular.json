@@ -31,8 +31,17 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.scss"
+              "src/styles.scss",
+              {
+                "input": "src/styles/dark/dark-theme.scss",
+                "bundleName": "dark-theme",
+                "inject": false
+              },
+              {
+                "input": "src/styles/light/light-theme.scss",
+                "bundleName": "light-theme",
+                "inject": false
+              }
             ],
             "scripts": []
           },
@@ -100,8 +109,17 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.scss"
+              "src/styles.scss",
+              {
+                "input": "src/styles/dark/dark-theme.scss",
+                "bundleName": "dark-theme",
+                "inject": false
+              },
+              {
+                "input": "src/styles/light/light-theme.scss",
+                "bundleName": "light-theme",
+                "inject": false
+              }
             ],
             "scripts": []
           }
