@@ -1,5 +1,52 @@
-<mat-toolbar color="primary">
-  <button
+<mat-toolbar color="primary" class="toolbar">
+
+  <div *ngIf="(isHandset$ | async) == false; else mobileBlock" class="header-spacer">
+    <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="inputSideNav.toggle()">
+      <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+    </button>
+
+    <span>My App</span>
+
+    <span class="spacer"></span>
+
+    <button mat-icon-button class="theme-icon" aria-label="Light theme" (click)="themeToggle()" id="theme-button">
+      <div *ngIf="currentTheme === 'light-theme'; else elseBlock">
+        <mat-icon>wb_sunny</mat-icon>
+      </div>
+      <ng-template #elseBlock>
+        <div>
+          <mat-icon>brightness_3</mat-icon>
+        </div>
+      </ng-template>
+    </button>
+
+  </div>
+
+  <ng-template #mobileBlock>
+    <div >
+
+      <button mat-icon-button class="theme-icon" aria-label="Light theme" (click)="themeToggle()" id="theme-button">
+        <div *ngIf="currentTheme === 'light-theme'; else elseBlock">
+          <mat-icon>wb_sunny</mat-icon>
+        </div>
+        <ng-template #elseBlock>
+          <div>
+            <mat-icon>brightness_3</mat-icon>
+          </div>
+        </ng-template>
+      </button>
+
+      <span>My App</span>
+      <span class="header-spacer"></span>
+
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="inputSideNav.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+    </div>
+
+  </ng-template>
+
+  <!-- <button
     type="button"
     aria-label="Toggle sidenav"
     mat-icon-button
@@ -13,9 +60,10 @@
 
   <button
     mat-icon-button
-    class="example-icon theme-icon"
+    class="theme-icon"
     aria-label="Light theme"
     (click)="themeToggle()"
+    id="theme-button"
   >
     <div *ngIf="currentTheme === 'light-theme'; else elseBlock">
       <mat-icon>wb_sunny</mat-icon>
@@ -25,5 +73,5 @@
         <mat-icon>brightness_3</mat-icon>
       </div>
     </ng-template>
-  </button>
+  </button> -->
 </mat-toolbar>

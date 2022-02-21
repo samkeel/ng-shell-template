@@ -11,6 +11,7 @@ $light-theme: mat.define-light-theme(
       primary: $light-primary,
       accent: $light-accent,
     ),
+    density: minimum,
   )
 );
 

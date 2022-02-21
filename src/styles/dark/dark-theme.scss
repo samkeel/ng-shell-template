@@ -11,6 +11,7 @@ $dark-theme: mat.define-dark-theme(
       primary: $dark-primary,
       accent: $dark-accent,
     ),
+    density: minimum,
   )
 );
 
@@ -19,8 +20,6 @@ $dark-color-scheme: (
     background: #ACEFF8,
   )
 );
-
-// $dark-theme: common.apply-extra-colors($dark-theme, $dark-color-scheme);
 
 // generate theme
 @include common.create-theme($dark-theme);
