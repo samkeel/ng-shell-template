@@ -18,8 +18,8 @@ export class ShellComponent implements OnInit {
       shareReplay()
     );
 
-    constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(private breakpointObserver: BreakpointObserver) { }
 
-    ngOnInit(): void {}
+  ngOnInit(): void {}
 
 }

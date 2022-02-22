@@ -1,5 +1,5 @@
 <h3>Raised Buttons</h3>
-<div class="example-button-row">
+<div class="">
   <button mat-raised-button>Basic</button>
   <button mat-raised-button color="primary">Primary</button>
   <button mat-raised-button color="accent">Accent</button>
@@ -9,7 +9,7 @@
 </div>
 
 <h3>Stroked Buttons</h3>
-<div class="example-button-row">
+<div class="">
   <button mat-stroked-button>Basic</button>
   <button mat-stroked-button color="primary">Primary</button>
   <button mat-stroked-button color="accent">Accent</button>
@@ -19,7 +19,7 @@
 </div>
 
 <h3>Flat Buttons</h3>
-<div class="example-button-row">
+<div class="">
   <button mat-flat-button>Basic</button>
   <button mat-flat-button color="primary">Primary</button>
   <button mat-flat-button color="accent">Accent</button>
@@ -27,3 +27,50 @@
   <button mat-flat-button disabled>Disabled</button>
   <a mat-flat-button routerLink=".">Link</a>
 </div>
+
+<br>
+
+<mat-grid-list cols="4" rowHeight="100px">
+  <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
+    {{tile.text}}
+  </mat-grid-tile>
+</mat-grid-list>
+
+<br>
+<mat-card>
+  <mat-card-title>Actions Buttons</mat-card-title>
+  <mat-card-subtitle>Start</mat-card-subtitle>
+  <mat-card-actions>
+
+    <button mat-raised-button color="primary">LIKE</button>
+    <button mat-raised-button color="accent">SHARE</button>
+
+  </mat-card-actions>
+</mat-card>
+
+<br>
+<mat-card>
+  <mat-card-title>Actions Buttons</mat-card-title>
+  <mat-card-subtitle>End</mat-card-subtitle>
+  <mat-card-actions align="end">
+
+    <button mat-raised-button color="primary">LIKE</button>
+    <button mat-raised-button color="accent">SHARE</button>
+
+  </mat-card-actions>
+</mat-card>
+
+<br>
+<mat-grid-list cols="2" rowHeight="100px">
+  <mat-grid-tile>Tile 1 (no header, no footer)</mat-grid-tile>
+  <mat-grid-tile>
+    <mat-grid-tile-header>Tile 2</mat-grid-tile-header>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="2">
+    <mat-grid-tile-header>Tile 3</mat-grid-tile-header>
+    <mat-grid-tile-footer>Tile 3 footer</mat-grid-tile-footer>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <mat-grid-tile-header>Tile 4</mat-grid-tile-header>
+  </mat-grid-tile>
+</mat-grid-list>

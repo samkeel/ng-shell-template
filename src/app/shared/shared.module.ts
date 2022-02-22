@@ -19,6 +19,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatCardModule } from '@angular/material/card';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import {MatGridListModule} from '@angular/material/grid-list';
+
 
 
 const components = [
@@ -39,7 +41,8 @@ const matModules = [
   MatExpansionModule,
   MatCardModule,
   MatTreeModule,
-  MatProgressBarModule
+  MatProgressBarModule,
+  MatGridListModule
 ];
 
 
