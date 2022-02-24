@@ -3,13 +3,13 @@ import { MatSidenav } from '@angular/material/sidenav';
 import { DOCUMENT } from '@angular/common';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
-import { map, shareReplay } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 import { SnackbarService } from '../services/snackbar.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
   readonly themeAnchor = this.document.getElementById('app-theme');
@@ -18,10 +18,7 @@ export class HeaderComponent implements OnInit {
 
   isHandset$: Observable<boolean> = this.breakpointObserver
     .observe(Breakpoints.Handset)
-    .pipe(
-      map((results) => results.matches),
-      shareReplay()
-    );
+    .pipe(map((results) => results.matches));
 
   constructor(
     private breakpointObserver: BreakpointObserver,
@@ -45,10 +42,9 @@ export class HeaderComponent implements OnInit {
 
   snackStatus() {
     if (this.currentTheme === 'light-theme') {
-    this.sb.openSnackBar('Light theme', '');
+      this.sb.openSnackBar('Light theme', '');
     } else {
       this.sb.openSnackBar('Dark theme', '', 2);
     }
-  };
-
+  }
 }

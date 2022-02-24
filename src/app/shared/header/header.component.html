@@ -1,10 +1,10 @@
 <mat-toolbar color="primary" class="toolbar">
 
-  <div *ngIf="(isHandset$ | async) == false; else mobileMenu">
+  <ng-container *ngIf="(isHandset$ | async) == false; else mobileMenu">
     <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="inputSideNav.toggle()">
       <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
     </button>
-  </div>
+  </ng-container>
 
   <ng-template #mobileMenu>
     <button mat-icon-button class="theme-icon" aria-label="Light theme" (click)="themeToggle()" id="theme-button">
@@ -22,7 +22,7 @@
   <span>My App</span>
   <span class="header-spacer"></span>
 
-  <div *ngIf="(isHandset$ | async) == false; else mobileTheme">
+  <ng-container *ngIf="(isHandset$ | async) == false; else mobileTheme">
     <button mat-icon-button class="theme-icon" aria-label="Light theme" (click)="themeToggle()" id="theme-button">
       <div *ngIf="currentTheme === 'light-theme'; else elseBlock">
         <mat-icon>wb_sunny</mat-icon>
@@ -33,7 +33,7 @@
         </div>
       </ng-template>
     </button>
-  </div>
+  </ng-container>
 
   <ng-template #mobileTheme>
     <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="inputSideNav.toggle()">
