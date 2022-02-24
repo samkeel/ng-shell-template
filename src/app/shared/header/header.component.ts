@@ -4,6 +4,7 @@ import { DOCUMENT } from '@angular/common';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
+import { SnackbarService } from '../services/snackbar.service';
 
 @Component({
   selector: 'app-header',
@@ -25,7 +26,8 @@ export class HeaderComponent implements OnInit {
   constructor(
     private breakpointObserver: BreakpointObserver,
     @Inject(DOCUMENT) private document: Document,
-    private renderer: Renderer2
+    private renderer: Renderer2,
+    private sb: SnackbarService
   ) {}
 
   ngOnInit() {}
@@ -38,6 +40,15 @@ export class HeaderComponent implements OnInit {
       this.currentTheme = 'light-theme';
       this.renderer.setAttribute(this.themeAnchor, 'href', '/light-theme.css');
     }
+    this.snackStatus();
   }
+
+  snackStatus() {
+    if (this.currentTheme === 'light-theme') {
+    this.sb.openSnackBar('Light theme', '');
+    } else {
+      this.sb.openSnackBar('Dark theme', '', 2);
+    }
+  };
 
 }

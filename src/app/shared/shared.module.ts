@@ -20,6 +20,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
 
 
 
@@ -42,7 +44,8 @@ const matModules = [
   MatCardModule,
   MatTreeModule,
   MatProgressBarModule,
-  MatGridListModule
+  MatGridListModule,
+  MatSnackBarModule
 ];
 
 
