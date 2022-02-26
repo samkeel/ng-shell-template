@@ -22,9 +22,6 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 
-
-
-
 const components = [
   HeaderComponent,
   HomeComponent,
