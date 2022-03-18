@@ -1,9 +1,10 @@
 @use '@angular/material' as mat;
 @use './dark_palette.scss' as dp;
 @use '../common.scss';
+@use "sass:map";
 
 // Define a dark theme
-$dark-primary: mat.define-palette(dp.$cust-dark-primary-palette);
+$dark-primary: mat.define-palette(dp.$cust-dark-primary-palette, A200);
 $dark-accent: mat.define-palette(dp.$cust-dark-accent-palette);
 $dark-theme: mat.define-dark-theme(
   (
@@ -17,9 +18,11 @@ $dark-theme: mat.define-dark-theme(
 
 $dark-color-scheme: (
   background: (
-    background: #ACEFF8,
+    background: map.get(dp.$cust-dark-primary-palette, 900)
   )
 );
+
+$dark-theme: common.apply-extra-colors($dark-theme, $dark-color-scheme);
 
 // generate theme
 @include common.create-theme($dark-theme);

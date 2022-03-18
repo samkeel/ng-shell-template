@@ -1,9 +1,10 @@
-@use '@angular/material' as mat;
-@use './light_palette.scss' as lp;
-@use '../common.scss';
+@use "@angular/material" as mat;
+@use "./light_palette.scss" as lp;
+@use "../common.scss";
+@use "sass:map";
 
 // Define a light theme
-$light-primary: mat.define-palette(lp.$cust-light-primary-palette);
+$light-primary: mat.define-palette(lp.$cust-light-primary-palette, A400);
 $light-accent: mat.define-palette(lp.$cust-light-accent-palette);
 $light-theme: mat.define-light-theme(
   (
@@ -17,15 +18,11 @@ $light-theme: mat.define-light-theme(
 
 $light-color-scheme: (
   background: (
-    background: #F6EBD7,
-  ),  
+    background: map.get(lp.$cust-light-primary-palette, A200),
+  ),
 );
 
 $light-theme: common.apply-extra-colors($light-theme, $light-color-scheme);
-
-.mat-drawer-inner-container {
-  background-color: #e9e0ca;
-}
 
 // generate theme
 @include common.create-theme($light-theme);
