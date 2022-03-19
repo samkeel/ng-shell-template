@@ -23,6 +23,7 @@ $light-color-scheme: (
   ),
 );
 
+
 $light-theme: common.apply-extra-colors($light-theme, $light-color-scheme);
 
 // generate theme

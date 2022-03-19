@@ -1,0 +1,11 @@
+@use "@angular/material" as mat;
+@use "sass:map";
+
+@mixin app-sidenav-theme($theme) {
+    $theme-colors: mat.get-color-config($theme);
+    $backgrounds: map-get($theme-colors, background);
+
+    .mat-tree {
+        background-color: mat.get-color-from-palette($backgrounds, background);
+    }
+}

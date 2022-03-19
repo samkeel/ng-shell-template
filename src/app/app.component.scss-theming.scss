@@ -5,7 +5,6 @@
   $theme-colors: material.get-color-config($theme);
   $backgrounds: map-get($theme-colors, background);
   $density-scale: material.get-density-config($theme);
-  // $is-dark: map.get($theme, is-dark);
 
   .content {
     background-color: material.get-color-from-palette($backgrounds, background);

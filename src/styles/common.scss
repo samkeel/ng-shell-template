@@ -1,10 +1,14 @@
 @use "@angular/material" as mat;
 @use "sass:map";
 @use "../app/app.component.scss-theming.scss" as root;
+@use "../app/shared/shell/shell.component.scss-theming.scss" as matdrawer;
+@use "../app/shared/sidenav/sidenav.component.scss-theme.scss" as tree;
 
 @mixin create-theme($theme) {
     @include mat.all-component-themes($theme);
     @include root.app-root-theme($theme);
+    @include matdrawer.app-shell-theme($theme);
+    @include tree.app-sidenav-theme($theme);
 }
 
 
