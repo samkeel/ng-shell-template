@@ -18,7 +18,8 @@ $light-theme: mat.define-light-theme(
 
 $light-color-scheme: (
   background: (
-    background: map.get(lp.$cust-light-primary-palette, A200),
+    // background: map.get(lp.$cust-light-primary-palette, A200),
+    background: #f2e8d3
   ),
 );
 
