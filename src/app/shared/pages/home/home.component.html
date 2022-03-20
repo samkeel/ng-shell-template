@@ -4,20 +4,23 @@
   [ngClass]="{ 'tablet-display': handsetDisplay }"
 >
   <mat-grid-tile [colspan]="colFullSpan">
-    <mat-card class="example-card">
-      <mat-card-title
-        [ngClass]="{ 'tablet-display-card-title': handsetDisplay }"
-        >Raised Buttons</mat-card-title
-      >
-      <mat-card-content>
-        <button mat-raised-button>Basic</button>
-        <button mat-raised-button color="primary">Primary</button>
-        <button mat-raised-button color="accent">Accent</button>
-        <button mat-raised-button color="warn">Warn</button>
-        <button mat-raised-button disabled>Disabled</button>
-        <a mat-raised-button routerLink=".">Link</a>
-      </mat-card-content>
-    </mat-card>
+    <app-main-card [title]="'Card'" [subTitle]="'SubTitle'">
+      <div body>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione a eos
+          cumque minus placeat ducimus incidunt quas deserunt repudiandae harum
+          nihil animi porro, totam itaque voluptatum unde debitis velit
+          excepturi!
+        </p>
+        <br>
+        <button mat-stroked-button>Basic</button>
+        <button mat-stroked-button color="primary">Primary</button>
+        <button mat-stroked-button color="accent">Accent</button>
+        <button mat-stroked-button color="warn">Warn</button>
+        <button mat-stroked-button disabled>Disabled</button>
+        <a mat-stroked-button routerLink=".">Link</a>
+      </div>
+    </app-main-card>
   </mat-grid-tile>
 
   <mat-grid-tile [colspan]="colFullSpan">
@@ -40,7 +43,7 @@
   <mat-grid-tile [colspan]="colFullSpan">
     <mat-card class="example-card">
       <mat-card-title
-        [ngClass]="{'tablet-display-card-title': handsetDisplay }"
+        [ngClass]="{ 'tablet-display-card-title': handsetDisplay }"
         >Flat Buttons</mat-card-title
       >
       <mat-card-content>

@@ -21,6 +21,7 @@ import { MatTreeModule } from '@angular/material/tree';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MainCardComponent } from './components/main-card/main-card.component';
 
 const components = [
   HeaderComponent,
@@ -28,6 +29,7 @@ const components = [
   AboutComponent,
   ShellComponent,
   SidenavComponent,
+  MainCardComponent
 ];
 
 const matModules = [
@@ -49,6 +51,7 @@ const matModules = [
 @NgModule({
   declarations: [
     ...components
+    
   ],
   imports: [
     ...matModules,
