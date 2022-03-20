@@ -1,99 +1,100 @@
-<mat-grid-list
-  [cols]="cols"
-  [rowHeight]="rowHeight"
-  [ngClass]="{ 'tablet-display': handsetDisplay }"
+<div
+  fxLayout="row wrap"
+  fxLayout.lt-sm="column"
+  fxLayoutGap="32px"
+  fxLayoutAlign="flex-start"
 >
-  <mat-grid-tile [colspan]="colFullSpan">
-    <app-main-card [title]="'Card'" [subTitle]="'SubTitle'">
-      <div body>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione a eos
-          cumque minus placeat ducimus incidunt quas deserunt repudiandae harum
-          nihil animi porro, totam itaque voluptatum unde debitis velit
-          excepturi!
-        </p>
-        <br>
-        <button mat-stroked-button>Basic</button>
-        <button mat-stroked-button color="primary">Primary</button>
-        <button mat-stroked-button color="accent">Accent</button>
-        <button mat-stroked-button color="warn">Warn</button>
-        <button mat-stroked-button disabled>Disabled</button>
-        <a mat-stroked-button routerLink=".">Link</a>
-      </div>
-    </app-main-card>
-  </mat-grid-tile>
+  <app-main-card
+    class="home-card"
+    fxFlex="0 1 calc(33.3% - 32px)"
+    fxFlex.lt-md="0 1 calc(50% - 32px)"
+    fxFlex.lt-sm="100%"
+    [title]="'Card'"
+    [subTitle]="'SubTitle'"
+  >
+    <div body>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione a eos
+        cumque minus placeat ducimus incidunt quas deserunt repudiandae harum
+        nihil animi porro, totam itaque voluptatum unde debitis velit excepturi!
+      </p>
+      <br />
+      <button mat-stroked-button>Basic</button>
+      <button mat-stroked-button color="primary">Primary</button>
+      <button mat-stroked-button color="accent">Accent</button>
+      <button mat-stroked-button color="warn">Warn</button>
+      <button mat-stroked-button disabled>Disabled</button>
+      <a mat-stroked-button routerLink=".">Link</a>
+    </div>
+  </app-main-card>
+  <app-main-card
+    class="home-card"
+    fxFlex="0 1 calc(33.3% - 32px)"
+    fxFlex.lt-md="0 1 calc(50% - 32px)"
+    fxFlex.lt-sm="100%"
+    [title]="'Card'"
+    [subTitle]="'SubTitle'"
+  >
+    <div body>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione a eos
+        cumque minus placeat ducimus incidunt quas deserunt repudiandae harum
+        nihil animi porro, totam itaque voluptatum unde debitis velit excepturi!
+      </p>
+      <br />
+      <button mat-stroked-button>Basic</button>
+      <button mat-stroked-button color="primary">Primary</button>
+      <button mat-stroked-button color="accent">Accent</button>
+      <button mat-stroked-button color="warn">Warn</button>
+      <button mat-stroked-button disabled>Disabled</button>
+      <a mat-stroked-button routerLink=".">Link</a>
+    </div>
+  </app-main-card>
+  <app-main-card
+    class="home-card"
+    fxFlex="0 1 calc(33.3% - 32px)"
+    fxFlex.lt-md="0 1 calc(50% - 32px)"
+    fxFlex.lt-sm="100%"
+    [title]="'Card'"
+    [subTitle]="'SubTitle'"
+  >
+    <div body>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione a eos
+        cumque minus placeat ducimus incidunt quas deserunt repudiandae harum
+        nihil animi porro, totam itaque voluptatum unde debitis velit excepturi!
+      </p>
+      <br />
+      <button mat-stroked-button>Basic</button>
+      <button mat-stroked-button color="primary">Primary</button>
+      <button mat-stroked-button color="accent">Accent</button>
+      <button mat-stroked-button color="warn">Warn</button>
+      <button mat-stroked-button disabled>Disabled</button>
+      <a mat-stroked-button routerLink=".">Link</a>
+    </div>
+  </app-main-card>
+  <app-main-card
+    class="home-card"
+    fxFlex="0 1 calc(33.3% - 32px)"
+    fxFlex.lt-md="0 1 calc(50% - 32px)"
+    fxFlex.lt-sm="100%"
+    [title]="'Card'"
+    [subTitle]="'SubTitle'"
+  >
+    <div body>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione a eos
+        cumque minus placeat ducimus incidunt quas deserunt repudiandae harum
+        nihil animi porro, totam itaque voluptatum unde debitis velit excepturi!
+      </p>
+      <br />
+      <button mat-stroked-button>Basic</button>
+      <button mat-stroked-button color="primary">Primary</button>
+      <button mat-stroked-button color="accent">Accent</button>
+      <button mat-stroked-button color="warn">Warn</button>
+      <button mat-stroked-button disabled>Disabled</button>
+      <a mat-stroked-button routerLink=".">Link</a>
+    </div>
+  </app-main-card>
 
-  <mat-grid-tile [colspan]="colFullSpan">
-    <mat-card class="example-card">
-      <mat-card-title
-        [ngClass]="{ 'tablet-display-card-title': handsetDisplay }"
-        >Stroked Buttons</mat-card-title
-      >
-      <mat-card-content>
-        <button mat-stroked-button>Basic</button>
-        <button mat-stroked-button color="primary">Primary</button>
-        <button mat-stroked-button color="accent">Accent</button>
-        <button mat-stroked-button color="warn">Warn</button>
-        <button mat-stroked-button disabled>Disabled</button>
-        <a mat-stroked-button routerLink=".">Link</a>
-      </mat-card-content>
-    </mat-card>
-  </mat-grid-tile>
-
-  <mat-grid-tile [colspan]="colFullSpan">
-    <mat-card class="example-card">
-      <mat-card-title
-        [ngClass]="{ 'tablet-display-card-title': handsetDisplay }"
-        >Flat Buttons</mat-card-title
-      >
-      <mat-card-content>
-        <button mat-flat-button>Basic</button>
-        <button mat-flat-button color="primary">Primary</button>
-        <button mat-flat-button color="accent">Accent</button>
-        <button mat-flat-button color="warn">Warn</button>
-        <button mat-flat-button disabled>Disabled</button>
-        <a mat-flat-button routerLink=".">Link</a>
-      </mat-card-content>
-    </mat-card>
-  </mat-grid-tile>
-
-  <mat-grid-tile [colspan]="colFullSpan">
-    <mat-card class="example-card">
-      <mat-card-title
-        [ngClass]="{ 'tablet-display-card-title': handsetDisplay }"
-        >Actions Buttons</mat-card-title
-      >
-      <mat-card-subtitle
-        [ngClass]="{ 'tablet-display-card-subtitle': handsetDisplay }"
-        >End</mat-card-subtitle
-      >
-      <mat-card-actions
-        align="end"
-        [ngClass]="{ 'tablet-display-card-action': handsetDisplay }"
-      >
-        <button mat-raised-button color="primary">LIKE</button>
-        <button mat-raised-button color="accent">SHARE</button>
-      </mat-card-actions>
-    </mat-card>
-  </mat-grid-tile>
-
-  <mat-grid-tile [colspan]="colHalfSpan">
-    <mat-card class="example-card">
-      <mat-card-title
-        [ngClass]="{ 'tablet-display-card-title': handsetDisplay }"
-        >Actions Buttons</mat-card-title
-      >
-      <mat-card-subtitle
-        [ngClass]="{ 'tablet-display-card-subtitle': handsetDisplay }"
-        >End</mat-card-subtitle
-      >
-      <mat-card-actions
-        align="end"
-        [ngClass]="{ 'tablet-display-card-action': handsetDisplay }"
-      >
-        <button mat-raised-button color="primary">LIKE</button>
-        <button mat-raised-button color="accent">SHARE</button>
-      </mat-card-actions>
-    </mat-card>
-  </mat-grid-tile>
-</mat-grid-list>
+</div>
